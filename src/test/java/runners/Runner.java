@@ -11,9 +11,9 @@ import org.junit.runner.RunWith;
                 "html:target/report/cucumber.html",
                 "json:target/report/cucumber.json"
         },
-        features = {"src/test/resources/features"},
+        features = {"src/test/resources/features/Register.feature"},
         glue = {"stepDefinitions"},
-        tags = "@login",
+        tags = "@negative",
         dryRun = false
 
 )

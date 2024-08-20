@@ -33,4 +33,10 @@ public class HomePageStepDefs {
         Assert.assertTrue(homePage.customerNameText.getText().contains(ConfigReader.getProperty(fullName)));
 
     }
+
+    @When("the user clicks on the Create An Account button")
+    public void theUserClicksOnTheCreateAnAccountButton() {
+
+        homePage.createAccountButton.click();
+    }
 }

@@ -1,6 +1,7 @@
 package pages;
 
 import io.cucumber.java.en.*;
+import io.cucumber.java.zh_cn.假如;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -18,6 +19,11 @@ public class HomePage {
 
     @FindBy(xpath = "(//ul[@class='header links'])[1]")
     public WebElement customerNameText;
+
+    @FindBy(xpath = "//div[@class='panel header']//a[normalize-space()='Create an Account']")
+    public WebElement createAccountButton;
+
+
 
 
 }
