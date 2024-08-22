@@ -6,14 +6,18 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",  // Feature dosyalarının yolu
-        glue = {"stepDefinitions"},                // Step Definitions sınıflarının yolu
+        features = "src/test/resources/features",
+        glue = {"stepDefinitions"},
         plugin = {
-                "pretty",                              // Konsolda daha okunabilir bir çıktı sağlar
-                "html:target/cucumber-reports.html"    // HTML raporu oluşturur (opsiyonel)
+                "pretty",
+                "html:target/cucumber-reports.html",
+                "json:target/json-report/cucumber.json",
+                "junit:target/cucumber-reports/Cucumber.xml"
         },
         tags = "@positive",
-        monochrome = true                          // Konsol çıktısını daha okunabilir hale getirir
+        dryRun = false
+
 )
+
 public class Runner {
 }

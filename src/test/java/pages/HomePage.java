@@ -21,6 +21,5 @@ public class HomePage extends BasePage{
     public void setup(String url){
         Driver.getDriver().get(ConfigReader.getProperty(url));
         ReusableMethods.wait(2);
-        erkekText.click();
     }
 }

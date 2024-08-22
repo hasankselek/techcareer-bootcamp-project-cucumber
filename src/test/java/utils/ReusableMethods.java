@@ -83,7 +83,6 @@ public class ReusableMethods {
         return target;
     }
 
-
     public static void verifyElementDisplayed(WebElement element) {
         try {
             Assert.assertTrue("Element not visible: " + element, element.isDisplayed());
@@ -92,6 +91,10 @@ public class ReusableMethods {
             Assert.fail("Element not found: " + element);
 
         }
+    }
+
+    public static void scrollToElement(WebElement element) {
+        JSUtilities.scrollToElement(Driver.getDriver(),element);
     }
 
 

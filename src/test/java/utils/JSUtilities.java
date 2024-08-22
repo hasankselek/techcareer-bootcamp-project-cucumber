@@ -35,12 +35,7 @@ public class JSUtilities {
         ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid red'", element);
     }
 
-    // A function that waits until the page is loaded.
-    public static void waitForPageLoadWithJS(WebDriver driver, Duration timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, timeout);
-        wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
-    }
-
+    
     // A function that scrolls to the bottom of the page.
     public static void scrollToBottom(WebDriver driver) {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");

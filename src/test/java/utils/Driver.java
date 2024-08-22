@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
@@ -39,7 +40,7 @@ public class Driver {
             }
 
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         }
 
         return driver;
