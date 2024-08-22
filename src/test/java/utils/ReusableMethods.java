@@ -3,6 +3,7 @@ package utils;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
@@ -10,10 +11,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 
 public class ReusableMethods {
@@ -95,6 +93,55 @@ public class ReusableMethods {
 
     public static void scrollToElement(WebElement element) {
         JSUtilities.scrollToElement(Driver.getDriver(),element);
+    }
+
+    public static void clickWithText(String text){
+        Driver.getDriver().findElement(By.xpath("//*[text()='" + text + "']")).click();
+    }
+
+    public static void sortingLowToHighVerification(List<WebElement> priceElements) {
+        List<Integer> prices = new ArrayList<>();
+
+        for (WebElement priceElement : priceElements) {
+
+            String priceText = priceElement.getText().replaceAll("\\D", "");
+
+            try {
+                int price = Integer.parseInt(priceText);
+                price = price / 100;
+                prices.add(price);
+            } catch (NumberFormatException e) {
+                System.out.println("Could not parse price: " + priceText);
+            }
+
+        }
+        prices.sort(Integer::compareTo);
+
+        List<Integer> originalPrices = new ArrayList<>(prices);
+        Assert.assertEquals(prices, originalPrices);
+    }
+
+    public static void sortingHighToLowVerification(List<WebElement> priceElements) {
+
+        List<Integer> prices = new ArrayList<>();
+
+        for (WebElement priceElement : priceElements) {
+
+            String priceText = priceElement.getText().replaceAll("\\D", "");
+            try {
+                int price = Integer.parseInt(priceText);
+                price = price / 100;
+                prices.add(price);
+
+            } catch (NumberFormatException e) {
+                System.out.println("Could not parse price: " + priceText);
+            }
+
+        }
+        prices.sort(Comparator.reverseOrder());
+
+        List<Integer> originalPrices = new ArrayList<>(prices);
+        Assert.assertEquals(prices, originalPrices);
     }
 
 
