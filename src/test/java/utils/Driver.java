@@ -6,47 +6,49 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 public class Driver {
 
-    private Driver() {
+
+    private Driver(){
+
     }
 
     public static WebDriver driver;
 
-    public static WebDriver getDriver() {
+    public static WebDriver getDriver(){
 
-        if (driver == null) {
-            String istenenBrowser = ConfigReader.getProperty("browser"); // firefox
+        String browser =ConfigReader.getProperty("browser");
 
-            switch (istenenBrowser) {
+
+        if (driver == null){
+
+            switch (browser){
                 case "firefox":
-                    driver = new FirefoxDriver();
+                    driver=new FirefoxDriver();
                     break;
-                case "edge":
+                case "safari" :
+                    driver= new SafariDriver();
+                    break;
+                case  "edge":
                     driver = new EdgeDriver();
-                    break;
-                case "safari":
-                    driver = new SafariDriver();
                     break;
                 default:
                     driver = new ChromeDriver();
             }
+
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
 
         return driver;
-
     }
 
-    public static void quitDriver() {
-
-        if (driver != null) {
-            driver.quit();
+    public static void quitDriver(){
+        driver.quit();
+        if (driver != null){
             driver = null;
-
         }
 
     }

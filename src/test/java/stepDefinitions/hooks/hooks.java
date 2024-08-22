@@ -6,8 +6,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utils.Driver;
 
-
-
 public class hooks {
 
     @After
