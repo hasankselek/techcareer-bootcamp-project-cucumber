@@ -21,7 +21,7 @@ Feature: As a User I want to filter computer on Trendyol web site
       | HP        |
       | ASUS      |
 
-  Scenario Outline: The user verifies that "Apple" macbooks are sorted low to high
+  Scenario Outline: The user verifies that products are sorted low to high
     And the user write "<BrandName>" on the left side
     And the user clicks sorting drop down menu
     And the user clicks "En düşük fiyat" price in the dropdown menu
@@ -34,7 +34,7 @@ Feature: As a User I want to filter computer on Trendyol web site
       | ASUS      |
 
   @test
-  Scenario Outline: The user verifies that "Apple" macbooks are sorted high to low
+  Scenario Outline: The user verifies that products are sorted high to low
     And  the user write "<BrandName>" on the left side
     And  the user clicks sorting drop down menu
     Then the user clicks "En yüksek fiyat" price in the dropdown menu
@@ -47,7 +47,7 @@ Feature: As a User I want to filter computer on Trendyol web site
       | ASUS      |
 
 
-  Scenario: Scenario: The user verifies that "Apple" macbooks products have free delivery
+  Scenario: Scenario: The user verifies that products have free delivery
     And  the user write "Apple" on the left side
     And  the user clicks the Kargo Bedava filter
     Then  the user clicks each product and verifies that all products have free delivery
