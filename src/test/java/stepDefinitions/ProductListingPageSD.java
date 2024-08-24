@@ -63,4 +63,10 @@ public class ProductListingPageSD {
     public void theUserClicksEachProductAndVerifiesThatAllProductsHaveFreeDelivery() {
         productListingPage.verifyFreeDelivery();
     }
+
+    @And("the user clicks favorite button")
+    public void theUserClicksFavoriteButton() {
+
+        productListingPage.clickFavouriteButton();
+    }
 }

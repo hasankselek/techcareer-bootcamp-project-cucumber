@@ -32,4 +32,8 @@ public class LoginPageSD {
     }
 
 
+    @Then("user logs in successfully")
+    public void userLogsInSuccessfully() {
+        loginPage.loginAllSteps();
+    }
 }

@@ -30,7 +30,6 @@ public class HomePageSD {
 
     @When("the user clicks on the Giris Yap button")
     public void the_user_clicks_on_the_giris_yap_button() {
-        homePage.erkekText.click();
         homePage.girisYapButton.click();
 
     }
@@ -50,5 +49,10 @@ public class HomePageSD {
     @And("the user searches for {string}")
     public void theUserSearchesFor(String searchText) {
         homePage.fillSearchBox(searchText);
+    }
+
+    @When("clicks on the KABUL ET button")
+    public void clicksOnTheKABULETButton() {
+        ReusableMethods.clickWithText("KABUL ET");
     }
 }

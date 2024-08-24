@@ -3,7 +3,7 @@ Feature: As a User I want to filter computer on Trendyol web site
 
   Background: User navigates to "Dizüstü Bilgisayar" page
     Given the user opens the "url" homepage
-    When the user selects "ERKEK"
+    When clicks on the KABUL ET button
     And  the user searches for "Dizüstü Bilgisayar"
 
 @t

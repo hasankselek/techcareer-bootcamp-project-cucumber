@@ -14,10 +14,8 @@ import org.junit.runner.RunWith;
                 "json:target/json-report/cucumber.json",
                 "junit:target/cucumber-reports/Cucumber.xml"
         },
-        tags = "@t",
+        tags = "@a",
         dryRun = false
-
-
 )
 
 public class Runner {

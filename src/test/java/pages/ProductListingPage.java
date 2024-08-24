@@ -17,7 +17,7 @@ public class ProductListingPage extends BasePage{
     public WebElement brandBox;
 
     @FindBy(xpath = "//*[@class='prdct-desc-cntnr-ttl-w']")
-    private List<WebElement> productInformationList;
+    public List<WebElement> productInformationList;
 
     @FindBy(xpath = "//div[@class='select-w']")
     public WebElement dropdownMenu;
@@ -30,6 +30,9 @@ public class ProductListingPage extends BasePage{
 
     @FindBy(xpath = "//button[@aria-label='Kargo Bedava']")
     public WebElement kargoBedavaButton;
+
+    @FindBy(xpath = "(//i[@class='fvrt-btn'])[1]")
+    public WebElement favButton;
 
 
     public void searchProductBrandName(String brandName){
@@ -51,6 +54,19 @@ public class ProductListingPage extends BasePage{
             Assert.assertTrue(freeDelivery.getText().equalsIgnoreCase("KARGO BEDAVA"));
         }
     }
+
+    public void clickFavouriteButton(){
+
+        favButton.click();
+    }
+
+    public String getProductInfo(){
+        return productInformationList.get(0).getText();
+    }
+
+
+
+
 
 
 

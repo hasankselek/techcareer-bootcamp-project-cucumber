@@ -4,10 +4,12 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.ConfigReader;
+import utils.ReusableMethods;
 
 
 public class LoginPage extends BasePage{
 
+    HomePage homePage = new HomePage();
 
     @FindBy(id = "login-email")
     private WebElement emailBox;
@@ -32,15 +34,26 @@ public class LoginPage extends BasePage{
     }
 
     public void login(String username, String password){
-        this.fillEmail(username);
+        fillEmail(username);
 
-        this.fillPassword(password);
+        fillPassword(password);
 
     }
 
     public void checkErrorMessage(String expectedErrorMessage) {
         String actualErrorMessage = errorMessageInfo.getText();
         Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
+    }
+
+    public void loginAllSteps(){
+        homePage.girisYapButton.click();
+        fillEmail("validEmail");
+        fillPassword("validPassword");
+        girisYapButton.click();
+        ReusableMethods.wait(2);
+        Assert.assertEquals("Hesabım",homePage.hesabimText.getText());
+
+
     }
 
 
