@@ -21,8 +21,8 @@ Bu proje, TechCareer tarafından gerçekleştirilen QA Mastery Bootcamp için ha
 ## Özellikler
 
 - **Giriş Yapma Senaryosu**: Kayıtlı kullanıcıların Trendyol Türkiye web sitesine giriş yapmalarını doğrular.
-- **Ürünleri Favorilere Ekleme ve Çıkartma**: Ürünleri favorilere ekleme,çıkartma durumlarını test eder ve doğru ürün eklenip eklenmedigini doğrular
-- **Sepete Ürün Ekleme**: Ürünleri sepete ekleme,çıkartma durumlarını,ürün sayısı ve ismi kontrollerini test eder. 
+- **Ürünleri Favorilere Ekleme ve Çıkartma Senaryosu**: Ürünleri favorilere ekleme,çıkartma durumlarını test eder ve doğru ürün eklenip eklenmedigini doğrular
+- **Sepete Ürün Ekleme Senaryosu**: Ürünleri sepete ekleme,çıkartma durumlarını,ürün sayısı ve ismi kontrollerini test eder. 
 - **Ürün Filtreleme Senaryosu**: Çeşitli markalara ait dizüstü bilgisayarları filtreler ve bu ürünlerin doğru sıralandığını kontrol eder.
 - **Ücretsiz Kargo Doğrulama Senaryosu**: Ürünlerde ücretsiz kargo olup olmadığını doğrular.
 - **Negatif Senaryolar**: Yanlış giriş bilgileri ve hatalı kayıt işlemleri gibi durumları test eder.
