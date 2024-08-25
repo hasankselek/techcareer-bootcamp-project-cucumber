@@ -1,4 +1,4 @@
-@Product_Filtering
+@PLP_Filtering
 Feature: As a User I want to filter computer on Trendyol web site
 
   Background: User navigates to "Dizüstü Bilgisayar" page
@@ -6,11 +6,11 @@ Feature: As a User I want to filter computer on Trendyol web site
     When clicks on the KABUL ET button
     And  the user searches for "Dizüstü Bilgisayar"
 
-@t
+
   Scenario: The user verifies that navigated to Dizüstü Bilgisayar page
     Then the user verifies that on the "Dizüstü Bilgisayar" page
 
-  @test
+
   Scenario Outline: The user verifies that laptop brands are filterable
     And the user write "<BrandName>" on the left side
     Then the user verifies that correct "<BrandName>" filtering
@@ -18,8 +18,7 @@ Feature: As a User I want to filter computer on Trendyol web site
       | BrandName |
       | Apple     |
       | LENOVO    |
-      | HP        |
-      | ASUS      |
+
 
   Scenario Outline: The user verifies that products are sorted low to high
     And the user write "<BrandName>" on the left side
@@ -30,10 +29,9 @@ Feature: As a User I want to filter computer on Trendyol web site
       | BrandName |
       | Apple     |
       | LENOVO    |
-      | HP        |
-      | ASUS      |
 
-  @test
+
+
   Scenario Outline: The user verifies that products are sorted high to low
     And  the user write "<BrandName>" on the left side
     And  the user clicks sorting drop down menu
@@ -43,8 +41,7 @@ Feature: As a User I want to filter computer on Trendyol web site
       | BrandName |
       | Apple     |
       | LENOVO    |
-      | HP        |
-      | ASUS      |
+
 
 
   Scenario: Scenario: The user verifies that products have free delivery

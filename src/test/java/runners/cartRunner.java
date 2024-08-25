@@ -6,16 +6,17 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
+        features = "src/test/resources/features/Cart.feature",
         glue = {"stepDefinitions"},
         plugin = {
                 "pretty",
-                "html:target/TrendyolReports.html",
-                "json:target/json-report/TrendyolReports.json",
-                "junit:target/cucumber-reports/TrendyolReports.xml"
+                "html:target/Cart-Reports.html",
+                "json:target/json-report/Cart-Reports.json",
+                "junit:target/cucumber-reports/Cart-Reports.xml"
         },
+        tags ="@Cart",
         dryRun = false
 )
 
-public class Runner {
+public class cartRunner {
 }

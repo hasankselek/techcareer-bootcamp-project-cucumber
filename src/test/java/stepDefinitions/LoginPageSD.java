@@ -10,6 +10,7 @@ public class LoginPageSD {
 
     @And("the user enters {string} email and {string} password login credentials")
     public void theUserEntersEmailAndPasswordLoginCredentials(String email, String password) {
+
         loginPage.login(email,password);
     }
 
@@ -21,19 +22,14 @@ public class LoginPageSD {
 
     @Then("the user should see an error message {string} indicating invalid credentials")
     public void theUserShouldSeeAnErrorMessageIndicatingInvalidCredentials(String expectedErrorMessage) {
+
         ReusableMethods.wait(2);
         loginPage.checkErrorMessage(expectedErrorMessage);
     }
 
-
-    @Then("the user verifies that the mail error message visible")
-    public void the_user_verifies_that_the_mail_error_message_visible() {
-
-    }
-
-
     @Then("user logs in successfully")
     public void userLogsInSuccessfully() {
+
         loginPage.loginAllSteps();
     }
 }

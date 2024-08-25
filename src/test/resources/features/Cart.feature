@@ -38,7 +38,7 @@ Scenarios to ensure that users can add products to the cart, view the cart conte
     Then the user clicks on Sepetim and verifies product name and price added to cart
     And the user deletes all products from chart
 
-  @b
+  @a
   Scenario: User updates the quantity of a product in the cart
     Then user logs in successfully
     And the user searches for "Grano Füme Komitatör"

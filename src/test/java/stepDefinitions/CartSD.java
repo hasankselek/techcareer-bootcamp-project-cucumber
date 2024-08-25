@@ -4,20 +4,18 @@ import io.cucumber.java.en.*;
 import org.junit.Assert;
 import pages.CartPage;
 import pages.HomePage;
-import pages.ProductDetailingPage;
 import utils.ReusableMethods;
 
 public class CartSD {
     CartPage cartPage = new CartPage();
-    ProductDetailingPage productDetailingPage = new ProductDetailingPage();
     ProductDetailingPageSD page = new ProductDetailingPageSD();
     HomePage homePage = new HomePage();
 
     int productFirstPrice;
 
-
     @Then("The user is shown a message indicating that the cart is empty")
     public void the_user_is_shown_a_message_indicating_that_the_cart_is_empty() {
+
         Assert.assertTrue(cartPage.emptyChartText.isDisplayed());
     }
 
@@ -25,10 +23,9 @@ public class CartSD {
     public void theUserClicksOnAndVerifiesProductNameAndPriceAddedToCart() {
         homePage.sepetimButton.click();
         ReusableMethods.wait(3);
-        //ReusableMethods.clickWithText("Anladım");
         Assert.assertTrue(cartPage.chartProductName.isDisplayed());
         Assert.assertTrue(cartPage.chartProductPrice.isDisplayed());
-        //ReusableMethods.clickWithText("Sil");
+
 
     }
 
@@ -52,6 +49,7 @@ public class CartSD {
 
     @And("the user deletes all products from chart")
     public void theUserDeletesAllProductsFromChart() {
+
         ReusableMethods.clickWithText("Sil");
     }
 }

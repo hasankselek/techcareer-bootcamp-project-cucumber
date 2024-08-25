@@ -18,7 +18,7 @@ Feature: As a user, I want to add products to favorites
     And the user clicks "Favorilerim" page
     And the user deletes all products from favorite
 
-  @a
+
   Scenario: Unregistered user adds the product to favorites
     And the user searches for "Ütü"
     And the user clicks favorite button

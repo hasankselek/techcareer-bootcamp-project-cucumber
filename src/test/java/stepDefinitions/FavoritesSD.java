@@ -6,9 +6,9 @@ import pages.ProductListingPage;
 import utils.ReusableMethods;
 
 public class FavoritesSD {
+
     FavoritePage favoritePage = new FavoritePage();
     ProductListingPage productListingPage = new ProductListingPage();
-
 
     @Then("the user clicks {string} page and verifies favorite products match")
     public void theUserClicksPageAndVerifiesFavoriteProductsMatch(String pageName) {

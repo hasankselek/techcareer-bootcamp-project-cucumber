@@ -51,7 +51,6 @@ public class ProductListingPageSD {
         ReusableMethods.sortingHighToLowVerification(productListingPage.PriceBox);
     }
 
-
     @And("the user clicks the Kargo Bedava filter")
     public void theUserClicksTheKargoBedavaFilter() {
         productListingPage.kargoBedavaButton.click();
@@ -72,6 +71,7 @@ public class ProductListingPageSD {
 
     @And("the user clicks product")
     public void theUserClicksProduct() {
+
         productListingPage.productList.get(0).click();
         ReusableMethods.wait(3);
     }
