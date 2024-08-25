@@ -1,4 +1,4 @@
-@product_filtering
+@Product_Filtering
 Feature: As a User I want to filter computer on Trendyol web site
 
   Background: User navigates to "Dizüstü Bilgisayar" page

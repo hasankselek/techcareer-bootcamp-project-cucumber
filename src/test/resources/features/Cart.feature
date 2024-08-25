@@ -1,3 +1,4 @@
+@Cart
 Feature: Add Product to Cart
 
 Scenarios to ensure that users can add products to the cart, view the cart content, and manage the items in the cart.
@@ -50,4 +51,3 @@ Scenarios to ensure that users can add products to the cart, view the cart conte
     Then The user is correct that the price of the product is increased when the number of products decreases
     And the user deletes all products from chart
 
-  

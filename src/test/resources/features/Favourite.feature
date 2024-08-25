@@ -1,4 +1,4 @@
-@favouriteproduct
+@Favorite
 Feature: As a user, I want to add products to favorites
 
   Background: User navigates to "Dizüstü Bilgisayar" page
