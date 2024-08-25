@@ -64,6 +64,7 @@ public class ProductListingPage extends BasePage{
     }
 
     public String getProductInfo(){
+
         return productInformationList.get(0).getText();
     }
 

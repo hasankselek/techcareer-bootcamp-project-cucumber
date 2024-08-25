@@ -109,7 +109,7 @@
                         </goals>
                         <configuration>
                             <projectName>Techcareer Bootcamp HTML Reports</projectName>
-                            <outputDirectory>${project.build.directory}/Trendyol Reports</outputDirectory>
+                            <outputDirectory>${project.build.directory}/trendyol-reports</outputDirectory>
                             <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
                                 <param>**/cucumber*.json</param>
@@ -126,7 +126,7 @@
                 <executions>
                     <execution>
                         <id>report</id>
-                        <phase>post-test</phase>
+                        <phase>post-integration-test</phase>
                         <goals>
                             <goal>extentreport</goal>
                         </goals>
