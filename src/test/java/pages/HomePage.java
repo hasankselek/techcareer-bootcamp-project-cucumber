@@ -18,8 +18,8 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//i[@class='cyrzo7gC']")
     private WebElement buyutec;
 
-    @FindBy(xpath = "//*[text()='ERKEK']")
-    public WebElement erkekText;
+    @FindBy(xpath = "//p[normalize-space()='Sepetim']")
+    public WebElement sepetimButton;
 
     @FindBy(xpath = "//p[contains(text(),'Giriş Yap')]")
     public WebElement girisYapButton;

@@ -69,4 +69,10 @@ public class ProductListingPageSD {
 
         productListingPage.clickFavouriteButton();
     }
+
+    @And("the user clicks product")
+    public void theUserClicksProduct() {
+        productListingPage.productList.get(0).click();
+        ReusableMethods.wait(3);
+    }
 }

@@ -19,6 +19,9 @@ public class ProductListingPage extends BasePage{
     @FindBy(xpath = "//*[@class='prdct-desc-cntnr-ttl-w']")
     public List<WebElement> productInformationList;
 
+    @FindBy(xpath = "//*[@class='p-card-chldrn-cntnr card-border']")
+    public List<WebElement> productList;
+
     @FindBy(xpath = "//div[@class='select-w']")
     public WebElement dropdownMenu;
 

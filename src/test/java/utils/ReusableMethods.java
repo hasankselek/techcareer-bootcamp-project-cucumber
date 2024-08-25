@@ -49,7 +49,7 @@ public class ReusableMethods {
         ) {
             driver.switchTo().window(eachWhd);
 
-            if (driver.getCurrentUrl().equals(Url)) {
+            if (driver.getCurrentUrl().contains(Url)) {
                 break;
             }
         }
@@ -83,7 +83,7 @@ public class ReusableMethods {
 
     public static void verifyElementDisplayed(WebElement element) {
         try {
-            Assert.assertTrue("Element not visible: " + element, element.isDisplayed());
+            Assert.assertTrue(element.isDisplayed());
         } catch (NoSuchElementException e) {
             e.printStackTrace();
             Assert.fail("Element not found: " + element);
@@ -142,6 +142,21 @@ public class ReusableMethods {
 
         List<Integer> originalPrices = new ArrayList<>(prices);
         Assert.assertEquals(prices, originalPrices);
+    }
+
+    public static void clickRandomlyOnScreen(WebDriver driver) {
+        // Tarayıcı penceresinin genişliği ve yüksekliğini alın
+        int width = driver.manage().window().getSize().getWidth();
+        int height = driver.manage().window().getSize().getHeight();
+
+        // Rastgele x ve y koordinatları oluşturun
+        Random random = new Random();
+        int x = random.nextInt(width);
+        int y = random.nextInt(height);
+
+        // Rastgele bir koordinata tıklama işlemi gerçekleştirin
+        Actions actions = new Actions(driver);
+        actions.moveByOffset(x, y).doubleClick().perform();
     }
 
 

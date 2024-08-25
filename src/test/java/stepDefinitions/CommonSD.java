@@ -22,6 +22,10 @@ public class CommonSD {
     public void theUserClicksPage(String pageName) {
         ReusableMethods.clickWithText(pageName);
 
+    }
 
+    @When("the user clicks on {string}")
+    public void the_user_clicks_on(String text) {
+        ReusableMethods.clickWithText(text);
     }
 }
