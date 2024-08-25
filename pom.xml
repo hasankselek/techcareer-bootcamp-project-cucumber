@@ -126,7 +126,7 @@
                 <executions>
                     <execution>
                         <id>report</id>
-                        <phase>post-integration-test</phase>
+                        <phase>post-test</phase>
                         <goals>
                             <goal>extentreport</goal>
                         </goals>
