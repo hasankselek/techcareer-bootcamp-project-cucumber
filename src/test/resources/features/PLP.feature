@@ -1,5 +1,5 @@
 @PLP_Filtering
-Feature: As a User I want to filter computer on Trendyol web site
+Feature: As a User, I want to filter computer on Trendyol web site
 
   Background: User navigates to "Dizüstü Bilgisayar" page
     Given the user opens the "url" homepage

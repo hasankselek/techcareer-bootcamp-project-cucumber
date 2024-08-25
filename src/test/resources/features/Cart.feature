@@ -1,5 +1,5 @@
 @Cart
-Feature: Add Product to Cart
+Feature: As a user, I want to add the products on the Trendyol website to the cart.
 
   Background:
     Given the user opens the "url" homepage
