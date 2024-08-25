@@ -64,13 +64,13 @@ Bu proje, TechCareer tarafından gerçekleştirilen QA Mastery Bootcamp için ha
 
 - Proje, UI test otomasyonunu kapsayacak şekilde yapılandırılmıştır.
 
-### Test Results
+## Test Results
 
-## Extend Reports
+###  Extend Reports
 
 ![TestResult.png](https://github.com/hasankselek/techcareer-bootcamp-project-cucumber/blob/main/TestsSS/TestResults.png)
 
-## Jenkins Reports
+###  Jenkins Reports
 
 ![JenkinsResult.png](https://github.com/hasankselek/techcareer-bootcamp-project-cucumber/blob/main/TestsSS/JenkinsResult.png)
 
