@@ -11,6 +11,7 @@ Bu proje, TechCareer tarafından gerçekleştirilen QA Mastery Bootcamp için ha
 - **JUnit**: Testlerin yürütülmesi ve raporlanması için kullanıldı.
 - **JavaFaker**: Test verilerini dinamik olarak üretmek için kullanıldı.
 - **ExtendReports**: Test sonuçlarını daha ayrıntılı olarak üretmek için kullanıldı.
+- **Jenkins**:GitHub entegre edilerek, her kod değişikliği yapıldığında otomatik olarak bir işlem başlatılabildi, böylece hatalar erken aşamada tespit edilip düzeltildi.
 
 ## Proje Yapısı
 
@@ -65,7 +66,16 @@ Bu proje, TechCareer tarafından gerçekleştirilen QA Mastery Bootcamp için ha
 
 ### Test Results
 
-![TestResult.png](https://github.com/hasankselek/techcareer-bootcamp-project-cucumber/blob/main/TestSS/TestResults.png)
+## Extend Reports
+
+![TestResult.png](https://github.com/hasankselek/techcareer-bootcamp-project-cucumber/blob/main/TestsSS/TestResults.png)
+
+## Jenkins Reports
+
+![JenkinsResult.png](https://github.com/hasankselek/techcareer-bootcamp-project-cucumber/blob/main/TestsSS/JenkinsResult.png)
+
+
+
 
 
 
