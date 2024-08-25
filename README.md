@@ -63,7 +63,7 @@ Bu proje, TechCareer tarafından gerçekleştirilen QA Mastery Bootcamp için ha
 
 - Proje, UI test otomasyonunu kapsayacak şekilde yapılandırılmıştır.
 
-### Terminal Test Result
+### Test Results
 
 ![TestResult.png](https://github.com/hasankselek/techcareer-bootcamp-project-cucumber/blob/main/TestSS/TestResults.png)
 
