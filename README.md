@@ -65,7 +65,7 @@ Bu proje, TechCareer tarafından gerçekleştirilen QA Mastery Bootcamp için ha
 
 ### Terminal Test Result
 
-![TestResult.png](/Users/hasan/Desktop/TechcareerAutomation/techcareer-bootcamp-project-cucumber/TestSS/TestResults.png)
+![TestResult.png](https://github.com/hasankselek/techcareer-bootcamp-project-cucumber/blob/main/TestSS/TestResults.png)
 
 
 
