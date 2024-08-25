@@ -2,14 +2,20 @@ package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CartPage;
 import pages.HomePage;
+import utils.Driver;
 import utils.ReusableMethods;
+
+import java.time.Duration;
 
 public class CartSD {
     CartPage cartPage = new CartPage();
     ProductDetailingPageSD page = new ProductDetailingPageSD();
     HomePage homePage = new HomePage();
+    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
     int productFirstPrice;
 
@@ -50,6 +56,8 @@ public class CartSD {
     @And("the user deletes all products from chart")
     public void theUserDeletesAllProductsFromChart() {
 
-        ReusableMethods.clickWithText("Sil");
+        ReusableMethods.wait(1);
+        cartPage.deleteButton.click();
+        wait.until(ExpectedConditions.visibilityOf(cartPage.suscessMessage));
     }
 }

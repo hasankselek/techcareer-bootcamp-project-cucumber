@@ -24,6 +24,12 @@ public class CartPage extends BasePage{
     @FindBy(xpath = "//*[@class='counter-content']")
     public WebElement productQuantity;
 
+    @FindBy(xpath = "//span[normalize-space()='Sil']")
+    public WebElement deleteButton;
+
+    @FindBy(xpath = "//span[contains(text(),'Sepet başarıyla güncellendi')]")
+    public WebElement suscessMessage;
+
 
     public int totalPrice(){
         String price = chartProductPrice.getText().replaceAll("\\D","");

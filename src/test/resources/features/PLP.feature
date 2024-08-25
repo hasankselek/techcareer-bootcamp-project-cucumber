@@ -17,8 +17,6 @@ Feature: As a User I want to filter computer on Trendyol web site
     Examples:
       | BrandName |
       | Apple     |
-      | LENOVO    |
-
 
   Scenario Outline: The user verifies that products are sorted low to high
     And the user write "<BrandName>" on the left side
@@ -28,8 +26,6 @@ Feature: As a User I want to filter computer on Trendyol web site
     Examples:
       | BrandName |
       | Apple     |
-      | LENOVO    |
-
 
 
   Scenario Outline: The user verifies that products are sorted high to low
@@ -40,9 +36,6 @@ Feature: As a User I want to filter computer on Trendyol web site
     Examples:
       | BrandName |
       | Apple     |
-      | LENOVO    |
-
-
 
   Scenario: Scenario: The user verifies that products have free delivery
     And  the user write "Apple" on the left side

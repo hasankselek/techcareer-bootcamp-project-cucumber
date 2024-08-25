@@ -1,25 +1,23 @@
 @Cart
 Feature: Add Product to Cart
 
-Scenarios to ensure that users can add products to the cart, view the cart content, and manage the items in the cart.
-
   Background:
     Given the user opens the "url" homepage
     When clicks on the KABUL ET button
 
 
-  Scenario: Unregistered user goes to the empty cart page
+  Scenario: Unregistered user goes to the empty cart page and deletes
     And the user clicks "Sepetim" page
     Then The user is shown a message indicating that the cart is empty
 
 
-  Scenario: Registered user goes to the empty cart page
+  Scenario: Registered user goes to the empty cart page and deletes
     Then user logs in successfully
     And the user clicks "Sepetim" page
     Then The user is shown a message indicating that the cart is empty
 
 
-  Scenario: Unregistered user adds a product to the cart
+  Scenario: Unregistered user adds a product to the cart and deletes
     And the user searches for "Grano Füme Komitatör"
     And the user clicks product
     And the user clicks Anladım button
@@ -28,7 +26,7 @@ Scenarios to ensure that users can add products to the cart, view the cart conte
     And the user deletes all products from chart
 
 
-  Scenario: Registered user adds a product to the cart
+  Scenario: Registered user adds a product to the cart and deletes
     Then user logs in successfully
     And the user searches for "Grano Füme Komitatör"
     And the user clicks product
@@ -38,8 +36,8 @@ Scenarios to ensure that users can add products to the cart, view the cart conte
     Then the user clicks on Sepetim and verifies product name and price added to cart
     And the user deletes all products from chart
 
-  @a
-  Scenario: User updates the quantity of a product in the cart
+
+  Scenario: User updates the quantity of a product in the cart and deletes
     Then user logs in successfully
     And the user searches for "Grano Füme Komitatör"
     And the user clicks product
